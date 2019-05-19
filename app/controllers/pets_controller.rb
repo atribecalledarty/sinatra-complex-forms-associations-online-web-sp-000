@@ -49,6 +49,7 @@ class PetsController < ApplicationController
       @pet.save
     end
     
+    if !params[""]
     redirect to "pets/#{@pet.id}"
   end
 end
