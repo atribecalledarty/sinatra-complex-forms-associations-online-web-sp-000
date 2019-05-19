@@ -11,7 +11,7 @@ class PetsController < ApplicationController
   end
 
   post '/pets' do 
-    @pet = Pet.create(params["pet_name"])
+    @pet = Pet.create(name: params["pet_name"])
     @owner = Owner.find(params["owner_id"])
     @pet.owner = @owner
     @pet.save
