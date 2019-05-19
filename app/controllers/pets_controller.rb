@@ -50,7 +50,8 @@ class PetsController < ApplicationController
     end
     
     if !params["pet_name"].empty?
-      @pet.name = params["pet_name"]  
+      @pet.name = params["pet_name"]
+      @pet.save
     end
     
     redirect to "pets/#{@pet.id}"
