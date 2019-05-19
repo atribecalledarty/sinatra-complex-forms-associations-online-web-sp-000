@@ -44,7 +44,7 @@ class PetsController < ApplicationController
       @owner.pets << @pet
       @owner.save
     else
-      @owner = Owner.find(params["owner"]["name"])
+      @owner = Owner.find(params["owner_id"])
       @pet.owner = @owner
       @pet.save
     end
